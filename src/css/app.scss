@@ -1,1 +1,18 @@
 // app global css in SCSS form
+
+$backgroud: #2e3440;
+$text: #d8dee9;
+
+.full-screen {
+  height: 100vh;
+}
+
+p {
+  font-size: 18px;
+}
+
+body.body--dark {
+  background-color: $backgroud;
+  color: $text;
+  font-family: "Rubik", sans-serif;
+}
