@@ -1,37 +1,69 @@
 <template>
   <div class="full-screen bg-dark flex flex-center">
-    <div class="absolute items-start blur q-pa-lg column">
+    <div class="column">
       <q-img
         src="/images/logo2.png"
         alt="bmc logo"
-        style="border-radius: 16px"
+        style="border-radius: 16px; max-width: 500px"
       />
-      <div class="text-h4 q-mt-lg">Hardware, sofware and more....</div>
+      <br />
+      <div class="text-h4 q-mt-md">Hardware, sofware and more....</div>
+      <div class="flex flex-center q-mt-md q-gutter-sm">
+        <q-btn
+          label="About us"
+          color="primary"
+          @click="aboutDialog = true"
+          icon="storefront"
+        />
 
-      <div class="flex flex-center">
-        <q-btn label="About us" color="primary" @click="dialog = true" />
+        <q-btn
+          label="Contact us"
+          color="primary"
+          @click="contactDialog = true"
+          icon="email"
+        />
       </div>
     </div>
   </div>
 
   <!-- About dialog -->
   <q-dialog
-    v-model="dialog"
+    v-model="aboutDialog"
     maximized
     transition-show="slide-up"
     transition-hide="slide-down"
   >
     <q-card class="bg-accent text-white">
-      <q-bar>
+      <div class="flex">
         <q-space />
-
-        <q-btn dense flat icon="close" v-close-popup>
+        <q-btn size="15px" flat icon="close" round v-close-popup>
           <q-tooltip class="bg-white text-primary">Close</q-tooltip>
         </q-btn>
-      </q-bar>
+      </div>
 
-      <q-card-section class="q-pt-none">
-        <about-us />
+      <q-card-section class="q-pt-none flex flex-center">
+        <AboutUs />
+      </q-card-section>
+    </q-card>
+  </q-dialog>
+
+  <!-- Contact dialog -->
+  <q-dialog
+    v-model="contactDialog"
+    maximized
+    transition-show="slide-left"
+    transition-hide="slide-left"
+  >
+    <q-card class="bg-accent text-white">
+      <div class="flex">
+        <q-space />
+        <q-btn size="15px" flat icon="close" round v-close-popup>
+          <q-tooltip class="bg-white text-primary">Close</q-tooltip>
+        </q-btn>
+      </div>
+
+      <q-card-section class="q-pt-none flex flex-center">
+        <ContactUs />
       </q-card-section>
     </q-card>
   </q-dialog>
@@ -40,14 +72,17 @@
 <script>
 import { ref } from "vue";
 import AboutUs from "./AboutUs.vue";
+import ContactUs from "./ContactUs.vue";
 
 export default {
   components: {
     AboutUs,
+    ContactUs,
   },
   setup() {
     return {
-      dialog: ref(false),
+      aboutDialog: ref(false),
+      contactDialog: ref(false),
     };
   },
 };
