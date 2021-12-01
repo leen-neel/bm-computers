@@ -33,5 +33,161 @@
         </p>
       </div>
     </div>
+
+    <div class="q-pa-md">
+      <q-carousel
+        v-model="slide"
+        transition-prev="slide-right"
+        transition-next="slide-left"
+        swipeable
+        animated
+        padding
+        autoplay
+        infinite
+        height="200px"
+        class="shadow-2 rounded-borders"
+      >
+        <q-carousel-slide :name="1" class="column no-wrap">
+          <div
+            class="
+              row
+              fit
+              justify-start
+              items-center
+              q-gutter-xs q-col-gutter
+              no-wrap
+            "
+          >
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/tplink.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/hp.png"
+              height="100px"
+              :ratio="1 / 1"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="2" class="column no-wrap">
+          <div
+            class="
+              row
+              fit
+              justify-start
+              items-center
+              q-gutter-xs q-col-gutter
+              no-wrap
+            "
+          >
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="3" class="column no-wrap">
+          <div
+            class="
+              row
+              fit
+              justify-start
+              items-center
+              q-gutter-xs q-col-gutter
+              no-wrap
+            "
+          >
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide :name="4" class="column no-wrap">
+          <div
+            class="
+              row
+              fit
+              justify-start
+              items-center
+              q-gutter-xs q-col-gutter
+              no-wrap
+            "
+          >
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+
+            <q-img
+              class="rounded-borders col-3"
+              src="/images/brands/lenovo.png"
+            />
+          </div>
+        </q-carousel-slide>
+      </q-carousel>
+    </div>
   </section>
 </template>
+
+<script>
+import { ref } from "vue";
+
+export default {
+  setup() {
+    return {
+      slide: ref(1),
+    };
+  },
+};
+</script>

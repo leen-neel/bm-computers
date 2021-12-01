@@ -1,13 +1,11 @@
 <template>
-  <div class="full-screen column bg-dark flex flex-center">
-    <q-img
-      src="/images/logo2.png"
-      alt="bmc logo"
-      style="border-radius: 16px; max-width: 800px"
-    />
+  <div class="full-screen column bg-dark flex flex-center q-pa-md">
+    <q-img src="/images/logo2.png" alt="bmc logo" style="border-radius: 16px" />
 
     <div class="column">
-      <div class="text-h4 q-mt-md">Hardware, sofware and more....</div>
+      <div class="text-h4 text-center q-mt-md">
+        Hardware, sofware and more....
+      </div>
       <div class="flex flex-center q-mt-md q-gutter-sm">
         <q-btn
           label="About us"
