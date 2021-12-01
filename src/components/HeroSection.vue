@@ -22,6 +22,13 @@
           @click="contactDialog = true"
           icon="email"
         />
+
+        <q-btn
+          label="Locate us"
+          color="primary"
+          @click="locateDialog = true"
+          icon="place"
+        />
       </div>
     </div>
   </div>
@@ -33,7 +40,7 @@
     transition-show="slide-up"
     transition-hide="slide-down"
   >
-    <q-card class="bg-accent text-white">
+    <q-card class="bg-section">
       <div class="flex">
         <q-space />
         <q-btn size="15px" flat icon="close" round v-close-popup>
@@ -54,7 +61,7 @@
     transition-show="slide-left"
     transition-hide="slide-left"
   >
-    <q-card class="bg-accent text-white">
+    <q-card class="bg-section">
       <div class="flex">
         <q-space />
         <q-btn size="15px" flat icon="close" round v-close-popup>
@@ -67,22 +74,46 @@
       </q-card-section>
     </q-card>
   </q-dialog>
+
+  <!-- Contact dialog -->
+  <q-dialog
+    v-model="locateDialog"
+    maximized
+    transition-show="fade"
+    transition-hide="fade"
+  >
+    <q-card class="bg-section">
+      <div class="flex">
+        <q-space />
+        <q-btn size="15px" flat icon="close" round v-close-popup>
+          <q-tooltip class="bg-white text-primary">Close</q-tooltip>
+        </q-btn>
+      </div>
+
+      <q-card-section class="q-pt-none flex flex-center">
+        <LocateUs />
+      </q-card-section>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script>
 import { ref } from "vue";
 import AboutUs from "./AboutUs.vue";
 import ContactUs from "./ContactUs.vue";
+import LocateUs from "./LocateUs.vue";
 
 export default {
   components: {
     AboutUs,
     ContactUs,
+    LocateUs,
   },
   setup() {
     return {
       aboutDialog: ref(false),
       contactDialog: ref(false),
+      locateDialog: ref(false),
     };
   },
 };
