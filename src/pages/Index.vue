@@ -6,6 +6,7 @@
 
 <script>
 import HeroSection from "src/components/HeroSection.vue";
+
 import { defineComponent } from "vue";
 
 export default defineComponent({

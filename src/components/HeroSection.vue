@@ -1,52 +1,54 @@
 <template>
-  <!-- Rendered on desktop -->
-  <div class="full-screen bg-dark row q-pa-xl">
-    <div class="col-6 heroPos">
+  <div class="full-screen bg-dark flex flex-center">
+    <div class="absolute items-start blur q-pa-lg column">
       <q-img
-        src="/images/cool.png"
-        spinner-color="primary"
-        spinner-size="82px"
+        src="/images/logo2.png"
+        alt="bmc logo"
         style="border-radius: 16px"
       />
-      <!-- <p class="text-h6 q-mt-sm">We manage hardware, software and more....</p> -->
-      <q-btn
-        type="a"
-        color="primary"
-        no-caps
-        class="cta q-mt-lg"
-        label="Learn more"
-        icon-right="arrow_forward"
-      />
+      <div class="text-h4 q-mt-lg">Hardware, sofware and more....</div>
+
+      <div class="flex flex-center">
+        <q-btn label="About us" color="primary" @click="dialog = true" />
+      </div>
     </div>
   </div>
+
+  <!-- About dialog -->
+  <q-dialog
+    v-model="dialog"
+    maximized
+    transition-show="slide-up"
+    transition-hide="slide-down"
+  >
+    <q-card class="bg-accent text-white">
+      <q-bar>
+        <q-space />
+
+        <q-btn dense flat icon="close" v-close-popup>
+          <q-tooltip class="bg-white text-primary">Close</q-tooltip>
+        </q-btn>
+      </q-bar>
+
+      <q-card-section class="q-pt-none">
+        <about-us />
+      </q-card-section>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { ref } from "vue";
+import AboutUs from "./AboutUs.vue";
 
-export default defineComponent({
-  name: "HeroSection",
-});
+export default {
+  components: {
+    AboutUs,
+  },
+  setup() {
+    return {
+      dialog: ref(false),
+    };
+  },
+};
 </script>
-
-<style lang="scss" scoped>
-.heroPos {
-  position: absolute;
-  left: 5%;
-  top: 30%;
-}
-
-.cta {
-  padding: 16px 40px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 700;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  max-height: 56px;
-  max-width: 273px;
-}
-</style>
