@@ -1,6 +1,10 @@
 <template>
   <div class="full-screen column bg-dark flex flex-center q-pa-md">
-    <q-img src="/images/logo2.png" alt="bmc logo" style="border-radius: 16px" />
+    <q-img
+      src="/images/logo2.png"
+      alt="bmc logo"
+      style="border-radius: 16px; width: 600px"
+    />
 
     <div class="column">
       <div class="text-h4 text-center q-mt-md">
