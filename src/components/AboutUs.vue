@@ -38,8 +38,7 @@
       <div class="col-xs-12 col-sm-6 col-md-6">
         <q-img
           src="/images/store.jpg"
-          style="border-radius: 16px"
-          class="q-my-md"
+          class="q-my-md radius-16"
           height="500px"
           width="300px"
           spinner-color="primary"
@@ -70,6 +69,7 @@
               items-center
               q-gutter-xl q-col-gutter
               no-wrap
+              flex-center
             "
           >
             <q-img
@@ -83,19 +83,15 @@
             />
 
             <q-img
-              class="rounded-borders col-2"
-              src="/images/brands/hp.png"
+              class="rounded-borders col-3"
+              src="/images/brands/zotac.png"
               height="100px"
               :ratio="1 / 1"
             />
 
             <q-img
               class="rounded-borders col-2"
-              src="/images/brands/lenovo.png"
-            />
-            <q-img
-              class="rounded-borders col-2"
-              src="/images/brands/lenovo.png"
+              src="/images/brands/hyperx.png"
             />
           </div>
         </q-carousel-slide>
@@ -108,22 +104,22 @@
               items-center
               q-gutter-xl q-col-gutter
               no-wrap
+              flex-center
             "
           >
             <q-img
               class="rounded-borders col-2"
-              src="/images/brands/lenovo.png"
+              src="/images/brands/asus.png"
             />
+
+            <q-img class="rounded-borders col-2" src="/images/brands/msi.png" />
 
             <q-img
               class="rounded-borders col-2"
-              src="/images/brands/lenovo.png"
+              src="/images/brands/intel.png"
             />
 
-            <q-img
-              class="rounded-borders col-2"
-              src="/images/brands/lenovo.png"
-            />
+            <q-img class="rounded-borders col-2" src="/images/brands/amd.png" />
           </div>
         </q-carousel-slide>
       </q-carousel>
