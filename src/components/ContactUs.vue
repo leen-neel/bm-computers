@@ -34,6 +34,15 @@
         <q-input v-model="subject" type="text" label="Subject" filled />
 
         <q-input v-model="message" type="textarea" label="Message" filled />
+
+        <q-btn
+          color="primary"
+          icon="send"
+          round
+          size="20px"
+          class="float-right q-mt-md q-pa-md"
+          @click="sendMessage()"
+        />
       </div>
     </div>
   </section>
@@ -41,6 +50,8 @@
 
 <script>
 import { defineComponent, ref } from "vue";
+import { useQuasar } from "quasar";
+import { sendMail } from "boot/sendMail";
 export default defineComponent({
   setup() {
     const name = ref("");
@@ -48,11 +59,57 @@ export default defineComponent({
     const subject = ref("");
     const message = ref("");
 
+    const quasar = useQuasar();
+
+    const messageSent = ref(false);
+    const messageFailed = ref(false);
+
+    const sendMessage = () => {
+      if (name.value && email.value && message.value && subject.value) {
+        sendMail({
+          name: name.value,
+          sender: email.value,
+          subject: subject.value,
+          body: message.value,
+        })
+          .then(() => {
+            quasar.notify({
+              message: "Your message was sent!",
+              color: "primary",
+              position: "top-right",
+              progress: true,
+              timeout: 1500,
+            });
+            messageSent.value = true;
+          })
+          .catch(() => {
+            messageFailed.value = true;
+            quasar.notify({
+              message: "Something went wrong 😔",
+              color: "red-10",
+              position: "top-right",
+              progress: true,
+              timeout: 1500,
+            });
+            return;
+          });
+      } else {
+        quasar.notify({
+          message: "Please enter all of the fields 🤦",
+          color: "red-10",
+          position: "top-right",
+          progress: true,
+          timeout: 1500,
+        });
+      }
+    };
+
     return {
       name,
       email,
       subject,
       message,
+      sendMessage,
     };
   },
 });

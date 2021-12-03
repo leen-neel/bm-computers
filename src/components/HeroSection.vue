@@ -3,7 +3,7 @@
     <q-img
       src="/images/logo2.png"
       alt="bmc logo"
-      style="border-radius: 16px; width: 600px"
+      style="border-radius: 16px; width: 80%"
     />
 
     <div class="column">

@@ -2,7 +2,7 @@
   <section class="q-mt-lg q-pa-md">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
-        <div class="text-h3 text-center poppins q-mb-md">About us</div>
+        <div class="text-h3 poppins q-mb-md">About us</div>
       </div>
 
       <div class="col-xs-12 col-sm-6 col-md-4">
@@ -34,16 +34,21 @@
       </div>
     </div>
 
-    <q-img
-      src="/images/store.jpg"
-      style="border-radius: 16px"
-      class="q-mb-md"
-      height="500px"
-      spinner-color="primary"
-      spinner-size="82px"
-    />
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <q-img
+          src="/images/store.jpg"
+          style="border-radius: 16px"
+          class="q-my-md"
+          height="500px"
+          width="300px"
+          spinner-color="primary"
+          spinner-size="82px"
+        />
+      </div>
+    </div>
 
-    <div class="q-pa-md">
+    <div>
       <q-carousel
         v-model="slide"
         transition-prev="slide-right"
@@ -53,7 +58,7 @@
         padding
         autoplay
         infinite
-        height="200px"
+        height="300px"
         class="shadow-2 rounded-borders"
       >
         <q-carousel-slide :name="1" class="column no-wrap">
