@@ -43,7 +43,7 @@
     />
   </div>
 
-  <Offers v-if="offers" />
+  <Offers v-if="offers" @close-offers="offers = false" />
 
   <!-- About dialog -->
   <q-dialog

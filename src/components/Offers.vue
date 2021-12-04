@@ -1,5 +1,17 @@
 <template>
   <section class="q-pa-md q-mt-md">
+    <div class="flex">
+      <q-space />
+      <q-btn
+        color="white"
+        class="q-mr-sm"
+        icon="close"
+        @click="closeOffers"
+        round
+        flat
+      />
+    </div>
+
     <div>
       <div class="text-h3">Offer</div>
       <p class="q-mt-sm">
@@ -11,3 +23,22 @@
     </div>
   </section>
 </template>
+
+<script>
+import { defineComponent } from "vue";
+export default defineComponent({
+  name: "Offers",
+
+  emits: ["close-offers"],
+
+  setup(props, { emit }) {
+    const closeOffers = () => {
+      emit("close-offers");
+    };
+
+    return {
+      closeOffers,
+    };
+  },
+});
+</script>
