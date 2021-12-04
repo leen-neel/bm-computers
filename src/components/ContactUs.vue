@@ -29,20 +29,58 @@
           </q-card>
         </div>
 
-        <q-input v-model="name" type="text" label="Name" filled />
-        <q-input v-model="email" type="email" label="Email" filled />
-        <q-input v-model="subject" type="text" label="Subject" filled />
+        <div v-if="!messageFailed && !messageSent">
+          <q-input
+            class="q-mt-sm"
+            v-model="name"
+            type="text"
+            label="Name"
+            filled
+          />
+          <q-input
+            class="q-mt-sm"
+            v-model="email"
+            type="email"
+            label="Email"
+            filled
+          />
+          <q-input
+            class="q-mt-sm"
+            v-model="subject"
+            type="text"
+            label="Subject"
+            filled
+          />
+          <q-input
+            class="q-mt-sm"
+            v-model="message"
+            type="textarea"
+            label="Message"
+            filled
+          />
+          <q-btn
+            color="primary"
+            icon="send"
+            round
+            size="20px"
+            class="float-right q-mt-md q-pa-md"
+            @click="sendMessage()"
+          />
+        </div>
 
-        <q-input v-model="message" type="textarea" label="Message" filled />
+        <div class="text-h6 text-center" v-if="messageFailed && !messageSent">
+          Something went wrong. No worries! You can send us an email at
+          <a
+            target="_blank"
+            :href="`mailto:info@bmcomputers.info?subject=${subject}&body=${message}`"
+          >
+            info@bmcomputers.info
+          </a>
+        </div>
 
-        <q-btn
-          color="primary"
-          icon="send"
-          round
-          size="20px"
-          class="float-right q-mt-md q-pa-md"
-          @click="sendMessage()"
-        />
+        <div class="text-h6 text-center" v-if="!messageFailed && messageSent">
+          Message sent successfully!
+        </div>
       </div>
     </div>
   </section>
@@ -110,6 +148,8 @@ export default defineComponent({
       subject,
       message,
       sendMessage,
+      messageFailed,
+      messageSent,
     };
   },
 });

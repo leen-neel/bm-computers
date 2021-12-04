@@ -1,9 +1,9 @@
 <template>
-  <div class="full-screen row bg-dark flex flex-center q-pa-md">
+  <div class="full-screen row flex flex-center q-pa-md">
     <q-img
       src="/images/logo.png"
       alt="bmc logo"
-      class="radius-16"
+      class="radius-16 logo"
       style="width: 80%"
     />
 
@@ -69,7 +69,6 @@
   <!-- Contact dialog -->
   <q-dialog
     v-model="contactDialog"
-    maximized
     transition-show="slide-left"
     transition-hide="slide-left"
   >
@@ -90,7 +89,6 @@
   <!-- Contact dialog -->
   <q-dialog
     v-model="locateDialog"
-    maximized
     transition-show="fade"
     transition-hide="fade"
   >
@@ -135,3 +133,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@media (max-width: $breakpoint-xs-max) {
+  .logo {
+    width: 500px;
+  }
+}
+</style>
