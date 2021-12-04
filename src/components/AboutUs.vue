@@ -79,15 +79,13 @@
             />
 
             <q-img
-              class="rounded-borders col-3"
-              src="/images/brands/zotac.png"
-              height="100px"
-              :ratio="1 / 1"
+              class="rounded-borders col-2"
+              src="/images/brands/intel.png"
             />
 
             <q-img
               class="rounded-borders col-2"
-              src="/images/brands/hyperx.png"
+              src="/images/brands/invo.png"
             />
           </div>
         </q-carousel-slide>
@@ -113,6 +111,36 @@
             <q-img class="rounded-borders col-2" src="/images/brands/hik.png" />
 
             <q-img class="rounded-borders col-2" src="/images/brands/amd.png" />
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide :name="3" class="column no-wrap">
+          <div
+            class="
+              row
+              fit
+              justify-start
+              items-center
+              q-gutter-xl q-col-gutter
+              no-wrap
+              flex-center
+            "
+          >
+            <q-img
+              class="rounded-borders col-2"
+              src="/images/brands/zotac.png"
+            />
+            <q-img
+              class="rounded-borders col-2"
+              src="/images/brands/kingston.png"
+            />
+            <q-img
+              class="rounded-borders col-1"
+              width="150px"
+              src="/images/brands/ryzen.png"
+            />
+
+            <div class="text-h6">and more...</div>
           </div>
         </q-carousel-slide>
       </q-carousel>
