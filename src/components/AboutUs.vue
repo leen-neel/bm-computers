@@ -3,10 +3,19 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="text-h3 poppins q-mb-md">About us</div>
+
+        <q-img
+          src="/images/store.jpg"
+          class="q-my-md radius-16 full-width"
+          height="500px"
+          width="300px"
+          spinner-color="primary"
+          spinner-size="82px"
+        />
       </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <p>
+      <div class="col-xs-12 col-sm-6 col-md-4 q-ml-lg">
+        <p style="padding-top: 80px">
           BM Computers is a Beit Mery based and standard computer repair Store.
           We are a computer repair company that is set to compete in the highly
           competitive computer repair services industry.
@@ -34,19 +43,6 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-6">
-        <q-img
-          src="/images/store.jpg"
-          class="q-my-md radius-16"
-          height="500px"
-          width="300px"
-          spinner-color="primary"
-          spinner-size="82px"
-        />
-      </div>
-    </div>
-
     <div>
       <q-carousel
         v-model="slide"
@@ -57,7 +53,7 @@
         padding
         autoplay
         infinite
-        height="300px"
+        height="200px"
         class="shadow-2 rounded-borders"
       >
         <q-carousel-slide :name="1" class="column no-wrap">
@@ -114,10 +110,7 @@
 
             <q-img class="rounded-borders col-2" src="/images/brands/msi.png" />
 
-            <q-img
-              class="rounded-borders col-2"
-              src="/images/brands/intel.png"
-            />
+            <q-img class="rounded-borders col-2" src="/images/brands/hik.png" />
 
             <q-img class="rounded-borders col-2" src="/images/brands/amd.png" />
           </div>
