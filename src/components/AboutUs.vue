@@ -1,6 +1,6 @@
 <template>
   <section class="q-mt-lg q-pa-md">
-    <div class="row">
+    <div :class="{ row: $q.screen.gt.sm }">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="text-h3 poppins q-mb-md">About us</div>
 
@@ -14,8 +14,11 @@
         />
       </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 q-ml-lg">
-        <p style="padding-top: 80px">
+      <div
+        class="col-xs-12 col-sm-6 col-md-4"
+        :class="{ content: $q.screen.gt.sm }"
+      >
+        <p>
           BM Computers is a Beit Mery based and standard computer repair Store.
           We are a computer repair company that is set to compete in the highly
           competitive computer repair services industry.
@@ -45,6 +48,7 @@
 
     <div>
       <q-carousel
+        v-if="$q.screen.gt.sm"
         v-model="slide"
         transition-prev="slide-right"
         transition-next="slide-left"
@@ -159,3 +163,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.content {
+  margin-left: 50px;
+  padding-top: 80px;
+}
+</style>

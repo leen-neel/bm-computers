@@ -10,26 +10,51 @@
       </q-badge>
       <q-space />
 
-      <q-btn color="white" icon="close" flat round @click="isOpen = false" />
+      <q-btn
+        color="white"
+        class="q-mr-sm"
+        icon="close"
+        flat
+        round
+        @click="isOpen = false"
+      />
     </div>
 
     <div class="text-h2 lobster">
       {{ heading }}
     </div>
     <p class="q-mt-sm">{{ description }}</p>
+
+    <q-btn
+      color="negative"
+      label="Learn more"
+      icon-right="arrow_right"
+      class="float-right"
+      @click="openOffers"
+    />
   </q-banner>
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
   props: {
     heading: String,
     description: String,
     hasSale: Boolean,
   },
-  data() {
+  emits: ["open"],
+
+  setup(props, { emit }) {
+    const isOpen = ref(true);
+
+    const openOffers = () => {
+      emit("open");
+    };
+
     return {
-      isOpen: true,
+      isOpen,
+      openOffers,
     };
   },
 };

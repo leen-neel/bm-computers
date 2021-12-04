@@ -39,8 +39,11 @@
       heading="Holiday sale"
       description="Get 69% off"
       :hasSale="true"
+      @open="offers = true"
     />
   </div>
+
+  <Offers v-if="offers" />
 
   <!-- About dialog -->
   <q-dialog
@@ -112,6 +115,7 @@ import AboutUs from "./AboutUs.vue";
 import ContactUs from "./ContactUs.vue";
 import LocateUs from "./LocateUs.vue";
 import SaleComponent from "./SaleComponent.vue";
+import Offers from "./Offers.vue";
 
 export default {
   components: {
@@ -119,12 +123,14 @@ export default {
     ContactUs,
     LocateUs,
     SaleComponent,
+    Offers,
   },
   setup() {
     return {
       aboutDialog: ref(false),
       contactDialog: ref(false),
       locateDialog: ref(false),
+      offers: ref(false),
     };
   },
 };
