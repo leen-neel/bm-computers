@@ -34,6 +34,12 @@
         />
       </div>
     </div>
+
+    <SaleComponent
+      heading="Holiday sale"
+      description="Get 69% off"
+      :hasSale="true"
+    />
   </div>
 
   <!-- About dialog -->
@@ -105,12 +111,14 @@ import { ref } from "vue";
 import AboutUs from "./AboutUs.vue";
 import ContactUs from "./ContactUs.vue";
 import LocateUs from "./LocateUs.vue";
+import SaleComponent from "./SaleComponent.vue";
 
 export default {
   components: {
     AboutUs,
     ContactUs,
     LocateUs,
+    SaleComponent,
   },
   setup() {
     return {
