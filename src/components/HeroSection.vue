@@ -1,5 +1,5 @@
 <template>
-  <div class="full-screen content-center flex flex-center q-pa-md q-gutter-lg">
+  <div class="flex full-screen flex-center q-pa-md q-gutter-lg">
     <q-img
       src="/images/logo.png"
       alt="bmc logo"
@@ -7,8 +7,8 @@
       style="width: 80%"
     />
 
-    <div class="column">
-      <div class="text-h4 text-center">Hardware, sofware and more....</div>
+    <div class="full-width">
+      <ProductsSlider />
       <div class="flex flex-center q-mt-sm q-gutter-sm">
         <q-btn
           label="About us"
@@ -112,6 +112,7 @@ import ContactUs from "./ContactUs.vue";
 import LocateUs from "./LocateUs.vue";
 import SaleComponent from "./SaleComponent.vue";
 import Offers from "./Offers.vue";
+import ProductsSlider from "./ProductsSlider.vue";
 
 export default {
   components: {
@@ -120,6 +121,7 @@ export default {
     LocateUs,
     SaleComponent,
     Offers,
+    ProductsSlider,
   },
   setup() {
     return {
@@ -133,8 +135,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dialogs {
-  width: 90%;
+.stuff {
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 
 @media (max-width: $breakpoint-xs-max) {
