@@ -1,5 +1,8 @@
 <template>
-  <div class="flex full-screen flex-center q-pa-md q-gutter-lg">
+  <div
+    class="full-screen flex-center q-pa-md q-gutter-lg"
+    :class="{ column: $q.screen.lt.md, flex: $q.screen.gt.sm }"
+  >
     <q-img
       src="/images/logo.png"
       alt="bmc logo"
