@@ -23,6 +23,11 @@ $text: #d8dee9;
   border-radius: 16px;
 }
 
+.q-dialog__backdrop {
+  transition: 500ms;
+  backdrop-filter: blur(7px);
+}
+
 p {
   font-size: 18px;
 }
