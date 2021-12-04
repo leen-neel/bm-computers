@@ -1,5 +1,5 @@
 <template>
-  <div class="full-screen row flex flex-center q-pa-md">
+  <div class="full-screen content-center flex flex-center q-pa-md q-gutter-lg">
     <q-img
       src="/images/logo.png"
       alt="bmc logo"
@@ -8,9 +8,7 @@
     />
 
     <div class="column">
-      <div class="text-h4 text-center q-mt-md">
-        Hardware, sofware and more....
-      </div>
+      <div class="text-h4 text-center">Hardware, sofware and more....</div>
       <div class="flex flex-center q-mt-sm q-gutter-sm">
         <q-btn
           label="About us"
@@ -38,7 +36,7 @@
     <SaleComponent
       heading="Holiday sale"
       description="Get 69% off"
-      :hasSale="true"
+      :hasSale="false"
       @open="offers = true"
     />
   </div>
@@ -72,7 +70,7 @@
     transition-show="slide-left"
     transition-hide="slide-left"
   >
-    <q-card class="bg-section">
+    <q-card class="bg-section dialogs">
       <div class="flex">
         <q-space />
         <q-btn size="15px" flat icon="close" round v-close-popup>
@@ -135,6 +133,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.dialogs {
+  width: 90%;
+}
+
 @media (max-width: $breakpoint-xs-max) {
   .logo {
     width: 500px;
