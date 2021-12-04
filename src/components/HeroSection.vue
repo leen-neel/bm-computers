@@ -1,7 +1,7 @@
 <template>
-  <div class="full-screen column bg-dark flex flex-center q-pa-md">
+  <div class="full-screen row bg-dark flex flex-center q-pa-md">
     <q-img
-      src="/images/logo2.png"
+      src="/images/logo.png"
       alt="bmc logo"
       class="radius-16"
       style="width: 80%"
@@ -11,7 +11,7 @@
       <div class="text-h4 text-center q-mt-md">
         Hardware, sofware and more....
       </div>
-      <div class="flex flex-center q-mt-md q-gutter-sm">
+      <div class="flex flex-center q-mt-sm q-gutter-sm">
         <q-btn
           label="About us"
           color="primary"
