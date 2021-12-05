@@ -1,31 +1,37 @@
 <template>
   <section class="q-mt-lg q-pa-md">
-    <div class="row">
+    <div class="column">
       <div class="col-12">
         <div class="text-h3 text-center poppins q-mb-md">Contact us</div>
       </div>
 
-      <div class="q-gutter-sm">
+      <div class="column flex">
         <div class="q-ma-md flex-center flex q-gutter-sm">
           <q-card class="col-4">
-            <q-card-section class="flex flex-center">
+            <q-card-section class="text-center">
               <q-icon name="call" size="40px" />
             </q-card-section>
-            <q-card-section> +961-4-870-115 </q-card-section>
+            <q-card-section class="contact-info">
+              +961-4-870-115
+            </q-card-section>
           </q-card>
 
           <q-card class="col-4">
-            <q-card-section class="flex flex-center">
+            <q-card-section class="text-center">
               <q-icon name="place" size="40px" />
             </q-card-section>
-            <q-card-section> Beit Mery - Lebanon </q-card-section>
+            <q-card-section class="contact-info">
+              Beit Mery - Lebanon
+            </q-card-section>
           </q-card>
 
           <q-card class="col-4">
-            <q-card-section class="flex flex-center">
+            <q-card-section class="text-center">
               <q-icon name="email" size="40px" />
             </q-card-section>
-            <q-card-section> info@bmcomputers.info </q-card-section>
+            <q-card-section class="contact-info">
+              info@bmcomputers.info
+            </q-card-section>
           </q-card>
         </div>
 
@@ -164,3 +170,15 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.contact-info {
+  font-size: 10px;
+}
+
+@media (max-width: $breakpoint-xs-max) {
+  .contact-info {
+    font-size: 18px;
+  }
+}
+</style>
