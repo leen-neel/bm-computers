@@ -4,7 +4,16 @@
     :class="{ column: $q.screen.lt.md, flex: $q.screen.gt.sm }"
   >
     <q-img
+      v-if="$q.screen.gt.sm"
       src="/images/logo.png"
+      alt="bmc logo"
+      class="radius-16 logo"
+      style="width: 80%"
+    />
+
+    <q-img
+      v-if="$q.screen.lt.md"
+      src="/images/logo-mobile.png"
       alt="bmc logo"
       class="radius-16 logo"
       style="width: 80%"
@@ -76,7 +85,7 @@
     transition-show="slide-left"
     transition-hide="slide-left"
   >
-    <q-card class="bg-section dialogs">
+    <q-card class="bg-section radius-16">
       <div class="flex">
         <q-space />
         <q-btn size="15px" flat icon="close" round v-close-popup>
@@ -96,7 +105,7 @@
     transition-show="fade"
     transition-hide="fade"
   >
-    <q-card class="bg-section">
+    <q-card class="bg-section radius-16" style="width: 90vw">
       <div class="flex">
         <q-space />
         <q-btn size="15px" flat icon="close" round v-close-popup>
@@ -104,9 +113,7 @@
         </q-btn>
       </div>
 
-      <q-card-section class="q-pt-none flex flex-center">
-        <LocateUs />
-      </q-card-section>
+      <LocateUs />
     </q-card>
   </q-dialog>
 </template>

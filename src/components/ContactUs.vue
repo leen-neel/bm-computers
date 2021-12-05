@@ -6,33 +6,40 @@
       </div>
 
       <div class="column flex">
-        <div class="q-ma-md flex-center flex q-gutter-sm">
-          <q-card class="col-4">
+        <div
+          v-if="$q.screen.gt.sm"
+          class="q-ma-md flex-center flex q-gutter-sm"
+        >
+          <q-card class="col-4 radius-16" style="width: 110px">
             <q-card-section class="text-center">
               <q-icon name="call" size="40px" />
             </q-card-section>
-            <q-card-section class="contact-info">
-              +961-4-870-115
+            <q-card-section class="text-center text-bold contact-info">
+              04/870 115
             </q-card-section>
           </q-card>
 
-          <q-card class="col-4">
+          <q-card class="col-4 radius-16" style="width: 110px">
             <q-card-section class="text-center">
               <q-icon name="place" size="40px" />
             </q-card-section>
-            <q-card-section class="contact-info">
-              Beit Mery - Lebanon
+            <q-card-section class="text-center text-bold contact-info">
+              Beit Mery
             </q-card-section>
           </q-card>
 
-          <q-card class="col-4">
+          <q-card class="col-4 radius-16" style="width: 110px">
             <q-card-section class="text-center">
               <q-icon name="email" size="40px" />
             </q-card-section>
-            <q-card-section class="contact-info">
-              info@bmcomputers.info
+            <q-card-section class="text-center text-bold contact-info">
+              Email
             </q-card-section>
           </q-card>
+        </div>
+
+        <div v-if="$q.screen.lt.md" class="text-center" style="font-size: 13px">
+          Call us on : 04/870 115 or send us an Email
         </div>
 
         <div v-if="!messageFailed && !messageSent">
@@ -173,12 +180,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .contact-info {
-  font-size: 10px;
-}
-
-@media (max-width: $breakpoint-xs-max) {
-  .contact-info {
-    font-size: 18px;
-  }
+  font-size: 15px;
 }
 </style>
