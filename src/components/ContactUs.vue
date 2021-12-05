@@ -65,6 +65,7 @@
             size="20px"
             class="float-right q-mt-md q-pa-md"
             @click="sendMessage()"
+            :disable="disabled || !isLoading"
           />
         </div>
 
@@ -87,7 +88,7 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed } from "vue";
 import { useQuasar } from "quasar";
 import { sendMail } from "boot/sendMail";
 export default defineComponent({
@@ -101,9 +102,15 @@ export default defineComponent({
 
     const messageSent = ref(false);
     const messageFailed = ref(false);
+    const isLoading = ref(false);
+
+    const disabled = computed(() => {
+      return name.value && email.value && subject.value && message.value;
+    });
 
     const sendMessage = () => {
       if (name.value && email.value && message.value && subject.value) {
+        isLoading.value = true;
         sendMail({
           name: name.value,
           sender: email.value,
@@ -118,6 +125,7 @@ export default defineComponent({
               progress: true,
               timeout: 1500,
             });
+            isLoading.value = false;
             messageSent.value = true;
           })
           .catch(() => {
@@ -150,6 +158,8 @@ export default defineComponent({
       sendMessage,
       messageFailed,
       messageSent,
+      isLoading,
+      disabled,
     };
   },
 });

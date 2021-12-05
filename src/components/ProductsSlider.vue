@@ -10,7 +10,7 @@
       padding
       autoplay
       infinite
-      height="200px"
+      height="30vh"
       width="100%"
       class="shadow-2 rounded-borders"
     >
@@ -21,28 +21,26 @@
             fit
             full-height
             items-center
-            q-gutter-xl q-col-gutter
+            q-col-gutter
             no-wrap
             flex-center
           "
         >
           <q-img
-            class="rounded-borders col-1"
+            class="q-mx-xl col-1"
             src="/images/products/logitech_mouse.png"
           />
 
-          <q-img
-            class="rounded-borders col-2"
-            src="/images/products/samsung_ssd.png"
-          />
+          <q-img class="q-mx-xl col-2" src="/images/products/samsung_ssd.png" />
 
           <q-img
-            class="rounded-borders col-1"
+            class="q-mx-xl col-1"
             src="/images/products/invo_batteries.png"
           />
 
           <q-img
-            class="rounded-borders col-1"
+            class="q-mx-xl col-2"
+            width="250px"
             src="/images/products/thinkpad.png"
           />
         </div>
@@ -52,29 +50,23 @@
           class="
             row
             fit
-            justify-start
+            full-height
             items-center
-            q-gutter-xl q-col-gutter
+            q-col-gutter
             no-wrap
             flex-center
           "
         >
-          <q-img
-            class="rounded-borders col-2"
-            src="/images/products/repair.png"
-          />
+          <q-img class="q-mx-xl col-2" src="/images/products/repair.png" />
 
           <q-img
-            class="rounded-borders col-2"
+            class="q-mx-xl col-2"
             src="/images/products/computer-repair.png"
           />
 
-          <q-img
-            class="rounded-borders col-1"
-            src="/images/products/router.png"
-          />
+          <q-img class="q-mx-xl col-1" src="/images/products/router.png" />
 
-          <q-img class="rounded-borders col-1" src="/images/products/ups.png" />
+          <q-img class="q-mx-xl col-1" src="/images/products/ups.png" />
         </div>
       </q-carousel-slide>
     </q-carousel>

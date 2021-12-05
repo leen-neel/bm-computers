@@ -1,6 +1,6 @@
 <template>
   <div
-    class="full-screen flex-center q-pa-md q-gutter-lg"
+    class="full-screen flex flex-center q-pa-md q-gutter-lg"
     :class="{ column: $q.screen.lt.md, flex: $q.screen.gt.sm }"
   >
     <q-img
@@ -12,6 +12,9 @@
 
     <div class="full-width">
       <ProductsSlider />
+    </div>
+
+    <div class="full-width">
       <div class="flex flex-center q-mt-sm q-gutter-sm">
         <q-btn
           label="About us"
