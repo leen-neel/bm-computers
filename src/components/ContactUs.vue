@@ -82,7 +82,7 @@
             size="20px"
             class="float-right q-mt-md q-pa-md"
             @click="sendMessage()"
-            :disable="disabled"
+            :disable="disabled || isLoading"
           />
         </div>
 
