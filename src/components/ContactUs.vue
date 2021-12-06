@@ -49,6 +49,7 @@
             type="text"
             label="Name"
             filled
+            :loading="isLoading"
           />
           <q-input
             class="q-mt-sm"
@@ -56,6 +57,7 @@
             type="email"
             label="Email"
             filled
+            :loading="isLoading"
           />
           <q-input
             class="q-mt-sm"
@@ -63,6 +65,7 @@
             type="text"
             label="Subject"
             filled
+            :loading="isLoading"
           />
           <q-input
             class="q-mt-sm"
@@ -70,6 +73,7 @@
             type="textarea"
             label="Message"
             filled
+            :loading="isLoading"
           />
           <q-btn
             color="primary"
@@ -78,7 +82,7 @@
             size="20px"
             class="float-right q-mt-md q-pa-md"
             @click="sendMessage()"
-            :disable="disabled || !isLoading"
+            :disable="disabled"
           />
         </div>
 
