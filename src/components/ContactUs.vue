@@ -90,9 +90,9 @@
           Something went wrong. No worries! You can send us an email at
           <a
             target="_blank"
-            :href="`mailto:info@bmcomputers.info?subject=${subject}&body=${message}`"
+            :href="`mailto:info.bmcomp@gmail.com?subject=${subject}&body=${message}`"
           >
-            info@bmcomputers.info
+            info.bmcomp@gmail.com
           </a>
         </div>
 
