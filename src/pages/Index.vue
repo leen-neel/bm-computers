@@ -8,6 +8,8 @@
 
     <AboutUs />
 
+    <LocateUs />
+
     <ContactUs />
   </q-page>
 </template>
@@ -16,6 +18,7 @@
 import AboutUs from "src/components/AboutUs.vue";
 import ContactUs from "src/components/ContactUs.vue";
 import HeroSection from "src/components/HeroSection.vue";
+import LocateUs from "src/components/LocateUs.vue";
 import ProductsSlider from "src/components/ProductsSlider.vue";
 
 import { defineComponent } from "vue";
@@ -27,6 +30,7 @@ export default defineComponent({
     AboutUs,
     ContactUs,
     ProductsSlider,
+    LocateUs,
   },
 });
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <section class="q-mt-lg q-pa-md">
-    <div class="row" :class="{ column: $q.screen.lt.md }">
-      <div class="col-6" :class="{ bg: $q.screen.gt.sm }">
+  <section class="q-mt-lg full-screen">
+    <div class="full-height row" :class="{ column: $q.screen.lt.md }">
+      <div class="col-6 column flex-center" :class="{ bg: $q.screen.gt.sm }">
         <div class="text-h3 text-center poppins q-mb-md">Contact us</div>
 
         <div v-if="$q.screen.lt.md" class="text-center" style="font-size: 13px">
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="column col-6 flex">
+      <div class="column col-6 q-pa-lg" style="margin-top: 200px">
         <div v-if="!messageFailed && !messageSent">
           <q-input
             class="q-mt-sm"
@@ -197,8 +197,7 @@ export default defineComponent({
 }
 
 .bg {
-  background-image: url("/bgs/poly.svg");
-  background-position: left;
+  background: url("/bgs/poly.svg") no-repeat bottom / cover;
 }
 
 .send-btn {
