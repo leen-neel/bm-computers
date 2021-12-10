@@ -1,128 +1,86 @@
 <template>
+  <!-- Desktop version -->
   <div
-    class="full-screen flex flex-center q-pa-md q-gutter-lg"
-    :class="{ column: $q.screen.lt.md, flex: $q.screen.gt.sm }"
+    v-if="$q.screen.gt.sm"
+    class="flex flex-center bg-image full-screen full-width"
   >
-    <q-img
-      v-if="$q.screen.gt.sm"
-      src="/images/logo.png"
-      alt="bmc logo"
-      class="radius-16 logo"
-      style="width: 80%"
-    />
+    <div class="row">
+      <div class="col-5 hero-text q-gutter-sm q-ml-lg q-pa-md flex column">
+        <div class="text-h4">BM Computers</div>
+        <div class="text-h6">
+          BM Computers is a Beit Mery based and standard computer repair Store.
+          We are a computer repair company that is set to compete in the highly
+          competitive computer repair services industry.
+        </div>
 
+        <q-btn
+          color="primary"
+          icon="south"
+          label="Learn more"
+          class="cta radius-16"
+        />
+      </div>
+
+      <q-space />
+
+      <img
+        src="/images/logo.png"
+        alt="bmc logo"
+        class="radius-16 logo col-6 q-mr-lg"
+      />
+    </div>
+  </div>
+
+  <!-- Mobile version -->
+  <div
+    class="bg-image flex flex-center full-screen full-width"
+    v-if="$q.screen.lt.md"
+  >
     <q-img
       v-if="$q.screen.lt.md"
       src="/images/logo-mobile.png"
       alt="bmc logo"
-      class="radius-16 logo"
-      style="width: 80%"
+      class="logo"
     />
 
-    <div class="full-width">
-      <ProductsSlider />
+    <div class="hero-text q-ma-lg q-pa-md flex column">
+      <div class="text-h4">BM Computers</div>
+      <div class="text-h6">
+        BM Computers is a Beit Mery based and standard computer repair Store. We
+        are a computer repair company that is set to compete in the highly
+        competitive computer repair services industry.
+      </div>
+
+      <q-btn
+        color="primary"
+        icon="south"
+        label="Learn more"
+        class="q-py-md q-mt-sm radius-16"
+      />
     </div>
-
-    <SaleComponent
-      heading="Holiday sale"
-      description="Get 69% off"
-      :hasSale="false"
-      @open="offers = true"
-    />
   </div>
-
-  <Offers v-if="offers" @close-offers="offers = false" />
-
-  <!-- About dialog -->
-  <q-dialog
-    v-model="aboutDialog"
-    maximized
-    transition-show="slide-up"
-    transition-hide="slide-down"
-  >
-    <q-card class="bg-section">
-      <div class="flex">
-        <q-space />
-        <q-btn size="15px" flat icon="close" round v-close-popup>
-          <q-tooltip class="bg-white text-primary">Close</q-tooltip>
-        </q-btn>
-      </div>
-
-      <q-card-section class="q-pt-none flex flex-center">
-        <AboutUs />
-      </q-card-section>
-    </q-card>
-  </q-dialog>
-
-  <!-- Contact dialog -->
-  <q-dialog
-    v-model="contactDialog"
-    transition-show="slide-left"
-    transition-hide="slide-left"
-  >
-    <q-card class="bg-section radius-16">
-      <div class="flex">
-        <q-space />
-        <q-btn size="15px" flat icon="close" round v-close-popup>
-          <q-tooltip class="bg-white text-primary">Close</q-tooltip>
-        </q-btn>
-      </div>
-
-      <q-card-section class="q-pt-none flex flex-center">
-        <ContactUs />
-      </q-card-section>
-    </q-card>
-  </q-dialog>
-
-  <!-- Contact dialog -->
-  <q-dialog
-    v-model="locateDialog"
-    transition-show="fade"
-    transition-hide="fade"
-  >
-    <q-card class="bg-section radius-16" style="width: 90vw">
-      <div class="flex">
-        <q-space />
-        <q-btn size="15px" flat icon="close" round v-close-popup>
-          <q-tooltip class="bg-white text-primary">Close</q-tooltip>
-        </q-btn>
-      </div>
-
-      <LocateUs />
-    </q-card>
-  </q-dialog>
 </template>
 
-<script>
-import { ref } from "vue";
-import AboutUs from "./AboutUs.vue";
-import ContactUs from "./ContactUs.vue";
-import LocateUs from "./LocateUs.vue";
-import SaleComponent from "./SaleComponent.vue";
-import Offers from "./Offers.vue";
-import ProductsSlider from "./ProductsSlider.vue";
-
-export default {
-  components: {
-    AboutUs,
-    ContactUs,
-    LocateUs,
-    SaleComponent,
-    Offers,
-    ProductsSlider,
-  },
-  setup() {
-    return {
-      aboutDialog: ref(false),
-      contactDialog: ref(false),
-      locateDialog: ref(false),
-      offers: ref(false),
-    };
-  },
-};
-</script>
-
 <style lang="scss" scoped>
+.bg-image {
+  background: url("/bgs/hero.svg") no-repeat bottom / cover;
+  width: 100%;
+}
+
+.hero-text {
+  background: rgba(129, 161, 193, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cta {
+  width: 20vw;
+  padding: 20px 50px;
+}
+
 @media (max-width: $breakpoint-xs-max) {
   .logo {
     width: 500px;
