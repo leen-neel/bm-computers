@@ -79,6 +79,8 @@
 .cta {
   width: 20vw;
   padding: 20px 50px;
+  font-weight: 900;
+  font-size: medium;
 }
 
 @media (max-width: $breakpoint-xs-max) {
