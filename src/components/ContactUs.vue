@@ -1,7 +1,10 @@
 <template>
-  <section class="q-mt-lg full-screen">
-    <div class="full-height row" :class="{ column: $q.screen.lt.md }">
-      <div class="col-6 column flex-center" :class="{ bg: $q.screen.gt.sm }">
+  <section class="q-mt-lg" :class="{ 'full-screen': $q.screen.gt.sm }">
+    <div
+      class="full-height row"
+      :class="{ column: $q.screen.lt.md, 'col-6 ': $q.screen.gt.sm }"
+    >
+      <div class="column flex-center" :class="{ bg: $q.screen.gt.sm }">
         <div class="text-h3 text-center poppins q-mb-md">Contact us</div>
 
         <div v-if="$q.screen.lt.md" class="text-center" style="font-size: 13px">
@@ -41,7 +44,10 @@
         </div>
       </div>
 
-      <div class="column col-6 q-pa-lg" style="margin-top: 200px">
+      <div
+        class="column q-pa-lg"
+        :class="{ 'col-6 ': $q.screen.gt.sm, 'xl-mt': $q.screen.gt.sm }"
+      >
         <div v-if="!messageFailed && !messageSent">
           <q-input
             class="q-mt-sm"
@@ -49,6 +55,7 @@
             type="text"
             label="Name"
             filled
+            placeholder="Your name"
             :loading="isLoading"
           />
           <q-input
@@ -56,6 +63,7 @@
             v-model="email"
             type="email"
             label="Email"
+            placeholder="example@test.com"
             filled
             :loading="isLoading"
           />
@@ -64,6 +72,7 @@
             v-model="subject"
             type="text"
             label="Subject"
+            placeholder="Fix my pc!"
             filled
             :loading="isLoading"
           />
@@ -72,6 +81,7 @@
             v-model="message"
             type="textarea"
             label="Message"
+            placeholder="Lorem ipsum dolor "
             filled
             :loading="isLoading"
           />
@@ -194,6 +204,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 .contact-info {
   font-size: 15px;
+}
+
+.xl-mt {
+  margin-top: 200px;
 }
 
 .bg {
