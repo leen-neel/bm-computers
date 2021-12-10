@@ -1,6 +1,5 @@
 <template>
   <q-carousel
-    v-if="$q.screen.gt.sm"
     v-model="slider"
     transition-prev="slide-right"
     transition-next="slide-left"

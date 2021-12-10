@@ -2,9 +2,9 @@
   <q-page>
     <HeroSection />
 
-    <div class="spacer layer q-mt-xl"></div>
-    <ProductsSlider />
-    <div class="spacer rotate-180 layer q-mb-xl"></div>
+    <div v-if="$q.screen.gt.sm" class="spacer layer q-mt-xl"></div>
+    <ProductsSlider v-if="$q.screen.gt.sm" />
+    <div v-if="$q.screen.gt.sm" class="spacer rotate-180 layer q-mb-xl"></div>
 
     <AboutUs />
 
