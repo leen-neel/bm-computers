@@ -15,7 +15,7 @@
       </div>
 
       <div
-        class="col-xs-12 col-sm-6 col-md-4"
+        class="col-xs-12 col-sm-6 col-md-5"
         :class="{ content: $q.screen.gt.sm }"
       >
         <p>

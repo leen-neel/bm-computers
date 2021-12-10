@@ -1,16 +1,18 @@
 <template>
   <section class="q-mt-lg q-pa-md">
-    <div class="column">
-      <div class="col-12">
+    <div class="row" :class="{ column: $q.screen.lt.md }">
+      <div class="col-6" :class="{ bg: $q.screen.gt.sm }">
         <div class="text-h3 text-center poppins q-mb-md">Contact us</div>
-      </div>
 
-      <div class="column flex">
+        <div v-if="$q.screen.lt.md" class="text-center" style="font-size: 13px">
+          Call us on : 04/870 115 or send us an Email
+        </div>
+
         <div
           v-if="$q.screen.gt.sm"
           class="q-ma-md flex-center flex q-gutter-sm"
         >
-          <q-card class="col-4 radius-16" style="width: 110px">
+          <q-card class="col-4 bg-blur radius-16" style="width: 110px">
             <q-card-section class="text-center">
               <q-icon name="call" size="40px" />
             </q-card-section>
@@ -19,7 +21,7 @@
             </q-card-section>
           </q-card>
 
-          <q-card class="col-4 radius-16" style="width: 110px">
+          <q-card class="col-4 bg-blur radius-16" style="width: 110px">
             <q-card-section class="text-center">
               <q-icon name="place" size="40px" />
             </q-card-section>
@@ -28,7 +30,7 @@
             </q-card-section>
           </q-card>
 
-          <q-card class="col-4 radius-16" style="width: 110px">
+          <q-card class="col-4 bg-blur radius-16" style="width: 110px">
             <q-card-section class="text-center">
               <q-icon name="email" size="40px" />
             </q-card-section>
@@ -37,11 +39,9 @@
             </q-card-section>
           </q-card>
         </div>
+      </div>
 
-        <div v-if="$q.screen.lt.md" class="text-center" style="font-size: 13px">
-          Call us on : 04/870 115 or send us an Email
-        </div>
-
+      <div class="column col-6 flex">
         <div v-if="!messageFailed && !messageSent">
           <q-input
             class="q-mt-sm"
@@ -78,9 +78,9 @@
           <q-btn
             color="primary"
             icon="send"
-            round
-            size="20px"
-            class="float-right q-mt-md q-pa-md"
+            label="Send"
+            size="15px"
+            class="float-right q-mt-md send-btn radius-16"
             @click="sendMessage()"
             :disable="disabled || isLoading"
           />
@@ -194,5 +194,14 @@ export default defineComponent({
 <style lang="scss" scoped>
 .contact-info {
   font-size: 15px;
+}
+
+.bg {
+  background-image: url("/bgs/poly.svg");
+  background-position: left;
+}
+
+.send-btn {
+  padding: 20px 50px;
 }
 </style>

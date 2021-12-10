@@ -1,7 +1,7 @@
 // app global css in SCSS form
 
 $backgroud: #3b4252;
-$text: #d8dee9;
+$text: #eceff4;
 
 .full-screen {
   height: 100vh;
@@ -21,6 +21,11 @@ $text: #d8dee9;
 
 .radius-16 {
   border-radius: 16px !important;
+}
+
+.bg-blur {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .q-dialog__backdrop {

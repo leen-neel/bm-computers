@@ -23,31 +23,6 @@
       <ProductsSlider />
     </div>
 
-    <div class="full-width">
-      <div class="flex flex-center q-mt-sm q-gutter-sm">
-        <q-btn
-          label="About us"
-          color="primary"
-          @click="aboutDialog = true"
-          icon="storefront"
-        />
-
-        <q-btn
-          label="Contact us"
-          color="primary"
-          @click="contactDialog = true"
-          icon="email"
-        />
-
-        <q-btn
-          label="Locate us"
-          color="primary"
-          @click="locateDialog = true"
-          icon="place"
-        />
-      </div>
-    </div>
-
     <SaleComponent
       heading="Holiday sale"
       description="Get 69% off"
@@ -148,12 +123,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.stuff {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
-
 @media (max-width: $breakpoint-xs-max) {
   .logo {
     width: 500px;
