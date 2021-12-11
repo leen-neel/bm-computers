@@ -227,7 +227,7 @@ export default defineComponent({
 }
 
 .xl-mt {
-  margin-top: 200px;
+  margin-top: 235px;
 }
 
 .bg {
