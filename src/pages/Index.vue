@@ -8,7 +8,7 @@
 
     <AboutUs />
 
-    <LocateUs />
+    <LocateUs v-if="false" />
 
     <ContactUs />
   </q-page>

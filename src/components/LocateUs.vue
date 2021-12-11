@@ -1,7 +1,11 @@
 <template>
   <section
     class="q-mt-lg q-pa-md"
-    :class="{ row: $q.screen.gt.sm, column: $q.screen.lt.md }"
+    :class="{
+      row: $q.screen.gt.sm,
+      column: $q.screen.lt.md,
+      'full-screen': $q.screen.gt.sm,
+    }"
   >
     <div class="col-6">
       <div class="text-h3 text-center poppins q-mb-md">Locate us</div>
