@@ -10,7 +10,11 @@
       </div>
     </div>
 
-    <q-card-actions class="q-mt-md" horizontal align="center">
+    <q-card-actions
+      class="flex justify-around logo q-mt-md"
+      horizontal
+      align="center"
+    >
       <q-btn class="btn" label="Our Services" @click="services" />
       <q-btn class="btn" label="Conpany info" @click="about" />
       <q-btn class="btn" label="Contact us" @click="contact" />
