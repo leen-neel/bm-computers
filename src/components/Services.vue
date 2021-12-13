@@ -87,7 +87,7 @@
     </div>
   </div>
 
-  <q-dialog v-model="thermal">
+  <q-dialog class="z-top" v-model="thermal">
     <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
@@ -129,7 +129,7 @@
     </q-card>
   </q-dialog>
 
-  <q-dialog v-model="repair">
+  <q-dialog class="z-top" v-model="repair">
     <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
@@ -157,13 +157,13 @@
           src="https://i.imgur.com/KmxTJH6.jpeg"
         />
       </q-card-section>
+
       <q-card-section>
         <strong class="text-h6"
           >The computer crashes frequently or does not start at all</strong
         >
-
-        <br />
-
+      </q-card-section>
+      <q-card-section>
         This can be caused by a faulty operating system, an accidentally changed
         BIOS, missing drivers, defective components or other sources of error.
         The technician’s computer diagnosis will provide information about this
@@ -174,46 +174,49 @@
         <strong class="text-h6"
           >Infestation of viruses and malicious programs</strong
         >
+      </q-card-section>
 
-        <br />
-
+      <q-card-section>
         Many users have ineffective antivirus programs or an incorrectly set
         firewall to protect the computer. However, these are essential in this
         day and age, as attacks on home computers continue to increase. These
         are usually so-called Trojans, which are hidden in documents, music
         files or pictures. Also, while visiting an unknown website, it is
         possible for a Trojan to be installed unnoticed on the system.
+      </q-card-section>
 
-        <br />
-
+      <q-card-section>
         When downloading mostly free programs, unwanted advertising programs are
         often installed. Although they do not attack the computer, they cause a
         lot of trouble with constantly popping up advertising windows.
+      </q-card-section>
 
-        <br />
+      <q-card-section>
         We can check your computer with an antivirus program and remove all
         types of viruses and malicious programs.
       </q-card-section>
 
       <q-card-section>
         <strong class="text-h6">Very slow or no internet</strong>
+      </q-card-section>
 
-        <br />
-
+      <q-card-section>
         Errors in the router settings, router placement within the house, or
         broken fiber optic cables often cause problems with Internet
         connections. Our technicians check the router settings and cable
         connections so you can surf the Internet at normal speeds.
+      </q-card-section>
 
-        <br />
+      <q-card-section>
         If no computer part is defective and needs to be replaced, and your
         device does not need to go to a shop, most problems can be solved on the
         spot, immediately. If a part is defective, it may be necessary for a
         replacement part to be ordered. Only in very rare cases must the
         technician take your device with him to carry out the repair in the
         shop.
+      </q-card-section>
 
-        <br />
+      <q-card-section>
         However, most problems are not caused by defective components, but by a
         faulty operating system, incompatibility, or other errors in the
         installed software.
@@ -221,7 +224,7 @@
     </q-card>
   </q-dialog>
 
-  <q-dialog v-model="data">
+  <q-dialog class="z-top" v-model="data">
     <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
@@ -282,7 +285,7 @@
     </q-card>
   </q-dialog>
 
-  <q-dialog v-model="cams">
+  <q-dialog class="z-top" v-model="cams">
     <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
