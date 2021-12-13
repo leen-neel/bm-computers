@@ -89,6 +89,18 @@
 
   <q-dialog v-model="thermal">
     <q-card>
+      <q-bar dark class="bg-dark text-white">
+        <q-space />
+        <q-btn
+          dense
+          flat
+          round
+          icon="close"
+          size="10px"
+          color="white"
+          v-close-popup
+        />
+      </q-bar>
       <q-card-section>
         Without thermal paste, there isn't optimal heat transfer between the CPU
         and the heat sink. As such, the CPU gets a lot hotter than it would be
@@ -119,6 +131,18 @@
 
   <q-dialog v-model="repair">
     <q-card>
+      <q-bar dark class="bg-dark text-white">
+        <q-space />
+        <q-btn
+          dense
+          flat
+          round
+          icon="close"
+          size="10px"
+          color="white"
+          v-close-popup
+        />
+      </q-bar>
       <q-card-section>
         Computers and laptop repairs are done by experience technician. First, a
         computer diagnosis is performed to detect potential problems. In many
@@ -199,6 +223,18 @@
 
   <q-dialog v-model="data">
     <q-card>
+      <q-bar dark class="bg-dark text-white">
+        <q-space />
+        <q-btn
+          dense
+          flat
+          round
+          icon="close"
+          size="10px"
+          color="white"
+          v-close-popup
+        />
+      </q-bar>
       <q-card-section>
         Data is sensitive and invaluable to many people. It can be in the form
         of digital family photos that have been stored on a device for years. It
@@ -248,6 +284,18 @@
 
   <q-dialog v-model="cams">
     <q-card>
+      <q-bar dark class="bg-dark text-white">
+        <q-space />
+        <q-btn
+          dense
+          flat
+          round
+          icon="close"
+          size="10px"
+          color="white"
+          v-close-popup
+        />
+      </q-bar>
       <q-card-section>
         We have the ability to install IP or analog commercial surveillance
         camera systems consisting of as little as 4 cameras right up to
