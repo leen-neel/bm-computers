@@ -2,9 +2,9 @@
   <q-page>
     <HeroSection />
 
-    <div v-if="$q.screen.gt.sm" class="spacer layer q-mt-xl"></div>
-    <ProductsSlider v-if="$q.screen.gt.sm" />
-    <div v-if="$q.screen.gt.sm" class="spacer rotate-180 layer q-mb-xl"></div>
+    <div class="spacer layer q-mt-xl"></div>
+    <Services />
+    <div class="spacer rotate-180 layer q-mb-xl"></div>
 
     <AboutUs />
 
@@ -16,7 +16,7 @@
 import AboutUs from "src/components/AboutUs.vue";
 import ContactUs from "src/components/ContactUs.vue";
 import HeroSection from "src/components/HeroSection.vue";
-import ProductsSlider from "src/components/ProductsSlider.vue";
+import Services from "src/components/Services.vue";
 
 import { defineComponent } from "vue";
 
@@ -26,7 +26,8 @@ export default defineComponent({
     HeroSection,
     AboutUs,
     ContactUs,
-    ProductsSlider,
+
+    Services,
   },
 });
 </script>

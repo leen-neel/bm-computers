@@ -26,7 +26,7 @@
       <img
         src="/images/logo.png"
         alt="bmc logo"
-        class="radius-16 logo col-6 q-mr-lg"
+        class="radius-16 shadow-24 logo col-6 q-mr-lg"
       />
     </div>
   </div>
