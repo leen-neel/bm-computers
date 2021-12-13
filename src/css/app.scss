@@ -67,6 +67,7 @@ body.body--dark {
 }
 ::-webkit-scrollbar-thumb {
   background-color: #eceff4;
+  border-radius: 16px;
 
   &:hover {
     background-color: #d8dee9;

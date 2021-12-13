@@ -31,7 +31,7 @@
         />
 
         <q-card-section class="q-pa-md text-center">
-          Pc Building & repair services
+          PC Building, Repair and Cleaning Services
         </q-card-section>
 
         <q-card-actions vertical align="center">
@@ -88,7 +88,7 @@
   </div>
 
   <q-dialog v-model="thermal">
-    <q-card>
+    <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
@@ -130,7 +130,7 @@
   </q-dialog>
 
   <q-dialog v-model="repair">
-    <q-card>
+    <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
@@ -222,7 +222,7 @@
   </q-dialog>
 
   <q-dialog v-model="data">
-    <q-card>
+    <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
@@ -283,7 +283,7 @@
   </q-dialog>
 
   <q-dialog v-model="cams">
-    <q-card>
+    <q-card class="radius-16">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
