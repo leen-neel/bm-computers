@@ -6,7 +6,11 @@
   >
     <div class="flex flex-center">
       <div class="hero-text q-pa-md">
-        <img src="/images/logo.png " alt="bmc logo" class="radius-16 logo" />
+        <img
+          src="https://cdn.discordapp.com/attachments/912888928749645896/919961869010214912/logo-mobile.png"
+          alt="bmc logo"
+          class="radius-16 logo"
+        />
       </div>
     </div>
 
@@ -29,7 +33,7 @@
     <div class="hero-text q-pa-md">
       <img
         v-if="$q.screen.lt.md"
-        src="/images/logo.png"
+        src="https://cdn.discordapp.com/attachments/912888928749645896/919961927696932934/logo-mobile_small.png"
         alt="bmc logo"
         class="logo"
       />
@@ -84,7 +88,7 @@ export default {
 }
 
 .logo {
-  width: 75vw;
+  width: 70vw;
 }
 
 @media (max-width: $breakpoint-xs-max) {

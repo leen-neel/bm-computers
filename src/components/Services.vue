@@ -1,7 +1,7 @@
 <template>
   <div class="text-h3 text-center bgc">Services</div>
   <div class="row bgc q-gutter-md flex-center">
-    <div class="col-xs-12 col-sm-6 col-md-3 q-pa-lg">
+    <div class="col-xs-12 col-sm-6 col-md-2 q-pa-lg">
       <q-card class="my-card bg-transparent no-shadow">
         <img
           class="radius-16"
@@ -23,7 +23,7 @@
       </q-card>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-3 q-pa-lg">
+    <div class="col-xs-12 col-sm-6 col-md-2 q-pa-lg">
       <q-card class="my-card bg-transparent no-shadow">
         <img
           class="radius-16"
@@ -31,7 +31,7 @@
         />
 
         <q-card-section class="q-pa-md text-center">
-          Custom PC Building/Repair Services
+          Pc Building & repair services
         </q-card-section>
 
         <q-card-actions vertical align="center">
@@ -45,7 +45,7 @@
       </q-card>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-3 q-pa-lg">
+    <div class="col-xs-12 col-sm-6 col-md-2 q-pa-lg">
       <q-card class="my-card bg-transparent no-shadow">
         <img
           class="radius-16"
@@ -62,6 +62,25 @@
             label="Learn more"
             icon-right="arrow_forward"
             @click="data = true"
+          />
+        </q-card-actions>
+      </q-card>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-2 q-pa-lg">
+      <q-card class="my-card bg-transparent no-shadow">
+        <img class="radius-16" src="https://imgur.com/agsax0M.jpg" />
+
+        <q-card-section class="q-pa-md text-center">
+          Security Camera Installation Service
+        </q-card-section>
+
+        <q-card-actions vertical align="center">
+          <q-btn
+            class="btn"
+            label="Learn more"
+            icon-right="arrow_forward"
+            @click="cams = true"
           />
         </q-card-actions>
       </q-card>
@@ -226,6 +245,36 @@
       </q-card-section>
     </q-card>
   </q-dialog>
+
+  <q-dialog v-model="cams">
+    <q-card>
+      <q-card-section>
+        We have the ability to install IP or analog commercial surveillance
+        camera systems consisting of as little as 4 cameras right up to
+        large-scale systems consisting of 300 cameras or more..
+      </q-card-section>
+      <q-card-section class="row flex-center">
+        <q-img
+          class="radius-16"
+          style="width: 500px"
+          src="https://i.imgur.com/dw1rDni.jpeg"
+        />
+      </q-card-section>
+      <q-card-section>
+        Camera systems help deter crime and reduce liability by providing an
+        unbiased record of events. They can be installed on the exterior or
+        interior of a building to monitor sensitive areas such as entrances,
+        parking lots, cash rooms, or secure areas of a building. They can also
+        be connected to access control systems to provide a record of who is
+        entering and exiting a building.
+      </q-card-section>
+      <q-card-section>
+        Any type of business can benefit from a camera system, but the most
+        common clients include hotels, hospitals, office buildings, schools,
+        retail stores, and government offices.
+      </q-card-section>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script>
@@ -236,11 +285,13 @@ export default defineComponent({
     const thermal = ref(false);
     const repair = ref(false);
     const data = ref(false);
+    const cams = ref(false);
 
     return {
       thermal,
       repair,
       data,
+      cams,
     };
   },
 });
