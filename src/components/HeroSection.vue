@@ -2,64 +2,68 @@
   <!-- Desktop version -->
   <div
     v-if="$q.screen.gt.sm"
-    class="flex flex-center bg-image full-screen full-width"
+    class="flex column flex-center bg-image full-screen full-width"
   >
-    <div class="row">
-      <div class="col-5 hero-text q-gutter-sm q-ml-lg q-pa-md flex column">
-        <div class="text-h4">BM Computers</div>
-        <div class="text-h6">
-          BM Computers is a Beit Mery based and standard computer repair Store.
-          We are a computer repair company that is set to compete in the highly
-          competitive computer repair services industry.
-        </div>
-
-        <q-btn
-          color="primary"
-          icon="south"
-          label="Learn more"
-          class="cta radius-16"
-        />
+    <div class="flex flex-center">
+      <div class="hero-text q-pa-md">
+        <img src="/images/logo.png " alt="bmc logo" class="radius-16 logo" />
       </div>
-
-      <q-space />
-
-      <img
-        src="/images/logo.png"
-        alt="bmc logo"
-        class="radius-16 shadow-24 logo col-6 q-mr-lg"
-      />
     </div>
+
+    <q-card-actions class="q-mt-md" horizontal align="center">
+      <q-btn class="btn" label="Our Services" @click="services" />
+      <q-btn class="btn" label="Conpany info" @click="about" />
+      <q-btn class="btn" label="Contact us" @click="contact" />
+    </q-card-actions>
   </div>
 
   <!-- Mobile version -->
   <div
-    class="bg-image flex flex-center full-screen full-width"
+    class="bg-image column flex flex-center full-screen full-width"
     v-if="$q.screen.lt.md"
   >
-    <q-img
-      v-if="$q.screen.lt.md"
-      src="/images/logo-mobile.png"
-      alt="bmc logo"
-      class="logo"
-    />
-
-    <div class="hero-text q-ma-lg q-pa-md flex column">
-      <div class="text-h4">BM Computers</div>
-      <div class="text-h6">
-        BM Computers is a Beit Mery based and standard computer repair Store. We
-        are a computer repair company that is set to compete in the highly
-        competitive computer repair services industry.
-      </div>
-
-      <q-btn
-        color="primary"
-        icon="south"
-        label="Learn more"
-        class="q-py-md q-mt-sm radius-16"
+    <div class="hero-text q-pa-md">
+      <img
+        v-if="$q.screen.lt.md"
+        src="/images/logo.png"
+        alt="bmc logo"
+        class="logo"
       />
     </div>
+
+    <q-card-actions class="q-mt-md" horizontal align="center">
+      <q-btn class="btn" label="Our Services" @click="services" />
+      <q-btn class="btn" label="Conpany info" @click="about" />
+      <q-btn class="btn" label="Contact us" @click="contact" />
+    </q-card-actions>
   </div>
 </template>
+
+<script>
+export default {
+  setup() {
+    const contact = () => {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    };
+
+    const services = () => {
+      document
+        .getElementById("services")
+        .scrollIntoView({ behavior: "smooth" });
+    };
+
+    const about = () => {
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    };
+
+    return {
+      contact,
+      services,
+      about,
+    };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .bg-image {
@@ -75,16 +79,13 @@
   border-radius: 10px;
 }
 
-.cta {
-  width: 20vw;
-  padding: 20px 50px;
-  font-weight: 900;
-  font-size: medium;
+.logo {
+  width: 75vw;
 }
 
 @media (max-width: $breakpoint-xs-max) {
   .logo {
-    width: 500px;
+    width: 300px;
   }
 }
 </style>

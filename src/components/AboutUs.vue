@@ -1,5 +1,5 @@
 <template>
-  <section class="q-mt-lg q-pa-md">
+  <section id="about" class="q-mt-lg q-pa-md">
     <div :class="{ row: $q.screen.gt.sm }">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="text-h3 poppins q-mb-md">About us</div>

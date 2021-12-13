@@ -2,6 +2,7 @@
   <section class="q-mt-sm" :class="{ 'full-screen': $q.screen.gt.sm }">
     <div class="full-height row" :class="{ column: $q.screen.lt.md }">
       <div
+        id="contact"
         class="column"
         :class="{ bg: $q.screen.gt.sm, 'col-6 ': $q.screen.gt.sm }"
       >

@@ -1,4 +1,5 @@
 <template>
+  <div class="text-h3 text-center bgc">Services</div>
   <div class="row bgc q-gutter-md flex-center">
     <div class="col-xs-12 col-sm-6 col-md-3 q-pa-lg">
       <q-card class="my-card bg-transparent no-shadow">
@@ -248,10 +249,5 @@ export default defineComponent({
 <style lang="scss" scoped>
 .bgc {
   background-color: #81a1c1;
-}
-
-.btn {
-  background-color: #59738b;
-  padding: 10px 15px;
 }
 </style>
