@@ -1,11 +1,7 @@
 <template>
   <section class="q-mt-sm" :class="{ 'full-screen': $q.screen.gt.sm }">
     <div class="full-height row" :class="{ column: $q.screen.lt.md }">
-      <div
-        id="contact"
-        class="column"
-        :class="{ bg: $q.screen.gt.sm, 'col-6 ': $q.screen.gt.sm }"
-      >
+      <div id="contact" class="column" :class="{ 'col-6 ': $q.screen.gt.sm }">
         <div class="text-h3 contact-header text-center poppins q-my-md">
           Contact us
         </div>
@@ -229,13 +225,8 @@ export default defineComponent({
 }
 
 .xl-mt {
-  margin-top: 125px;
+  margin-top: 200px;
 }
-
-.bg {
-  background: url("/bgs/poly.svg") no-repeat bottom / cover;
-}
-
 .send-btn {
   padding: 20px;
   margin: 15px;

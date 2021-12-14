@@ -88,7 +88,7 @@
   </div>
 
   <q-dialog class="z-top" v-model="thermal">
-    <q-card class="radius-16">
+    <q-card class="radius-16 popup">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
@@ -130,7 +130,7 @@
   </q-dialog>
 
   <q-dialog class="z-top" v-model="repair">
-    <q-card class="radius-16">
+    <q-card class="radius-16 popup">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
@@ -225,7 +225,7 @@
   </q-dialog>
 
   <q-dialog class="z-top" v-model="data">
-    <q-card class="radius-16">
+    <q-card class="radius-16 popup">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
@@ -286,7 +286,7 @@
   </q-dialog>
 
   <q-dialog class="z-top" v-model="cams">
-    <q-card class="radius-16">
+    <q-card class="radius-16 popup">
       <q-bar dark class="bg-dark text-white">
         <q-space />
         <q-btn
@@ -351,5 +351,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 .bgc {
   background-color: #81a1c1;
+}
+
+.popup {
+  width: 900px;
+  max-width: 80vw;
 }
 </style>
