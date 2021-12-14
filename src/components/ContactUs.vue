@@ -61,7 +61,7 @@
       </div>
 
       <div
-        class="column q-pa-lg"
+        class="q-px-lg"
         :class="{ 'col-6 ': $q.screen.gt.sm, 'xl-mt': $q.screen.gt.sm }"
       >
         <div v-if="!messageFailed && !messageSent">
@@ -104,9 +104,9 @@
           <q-btn
             color="primary"
             icon="send"
-            label="Send"
+            round
             size="15px"
-            class="float-right q-mt-md send-btn radius-16"
+            class="float-right send-btn"
             @click="sendMessage()"
             :disable="disabled || isLoading"
           />
@@ -237,6 +237,14 @@ export default defineComponent({
 }
 
 .send-btn {
-  padding: 20px 50px;
+  padding: 20px;
+  margin: 15px;
+}
+
+@media (max-width: $breakpoint-xs-max) {
+  .send-btn {
+    padding: 15px;
+    margin: 15px;
+  }
 }
 </style>
