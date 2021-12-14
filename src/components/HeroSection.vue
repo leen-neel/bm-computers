@@ -7,7 +7,7 @@
     <div class="flex flex-center">
       <div class="hero-text q-pa-md">
         <img
-          src="https://cdn.discordapp.com/attachments/912888928749645896/919961869010214912/logo-mobile.png"
+          src="https://cdn.discordapp.com/attachments/912888928749645896/920259870744256562/Desktop_logo.png"
           alt="bmc logo"
           class="radius-16 logo"
         />
