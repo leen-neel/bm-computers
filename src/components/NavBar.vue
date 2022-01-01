@@ -3,7 +3,7 @@
     <q-space />
 
     <q-btn flat label="Our Services" @click="services" />
-    <q-btn flat label="Conpany info" @click="about" />
+    <q-btn flat label="Company info" @click="about" />
     <q-btn flat label="Contact us" @click="contact" />
   </div>
 </template>
