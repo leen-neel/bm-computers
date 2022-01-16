@@ -11,30 +11,15 @@
         transition-hide="jump-up"
       >
         <q-list style="min-width: 100px">
-          <q-item
-            @click="services"
-            class="text-center q-ma-sm"
-            clickable
-            v-close-popup
-          >
+          <q-item @click="services" class="text-center q-ma-sm" clickable>
             <q-item-section> Our services </q-item-section>
           </q-item>
 
-          <q-item
-            @click="about"
-            class="text-center q-ma-sm"
-            clickable
-            v-close-popup
-          >
+          <q-item @click="about" class="text-center q-ma-sm" clickable>
             <q-item-section> Company info </q-item-section>
           </q-item>
 
-          <q-item
-            @click="contact"
-            class="text-center q-ma-sm"
-            clickable
-            v-close-popup
-          >
+          <q-item @click="contact" class="text-center q-ma-sm" clickable>
             <q-item-section> Contact us </q-item-section>
           </q-item>
         </q-list>
